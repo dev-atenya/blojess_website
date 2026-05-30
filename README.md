@@ -1,2 +1,2 @@
 # blojess_website
-Website for blojes enterprises
+Website for blojess enterprises
