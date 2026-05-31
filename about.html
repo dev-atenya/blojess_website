@@ -7,13 +7,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
+  <!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <img src="blojess-logo.png" alt="Blojess Enterprises">
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <p class="loader-text">Loading...</p>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="blojess-logo.png" alt="Blojess Enterprises Logo">
+    <img src="images/blojess-logo.png" alt="Blojess Enterprises Logo">
     <div class="nav-logo-text">
       <span class="nav-logo-name">Blojess Enterprises</span>
       <span class="nav-logo-sub">General Suppliers · Kenya</span>
@@ -146,14 +156,21 @@
         <span class="contact-icon">📞</span>
         <div>
           <div class="contact-key">Phone</div>
-          <div class="contact-val">+254 700 000 000</div>
+          <div class="contact-val">+254 734 806 637</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+        <div>
+          <div class="contact-key">Whatsapp</div>
+          <div class="contact-val"><a href="https://wa.me/254734806637" target="_blank" style="color:inherit;text-decoration:none;">+254 734 806 637</a></div>
         </div>
       </div>
       <div class="contact-item">
         <span class="contact-icon">✉️</span>
         <div>
           <div class="contact-key">Email</div>
-          <div class="contact-val">info@blojessenterprises.com</div>
+          <div class="contact-val"><a href="mailto:blojessenterprises1@gmail.com" style="color:inherit;text-decoration:none;">blojessenterprises1@gmail.com</a></div>
         </div>
       </div>
       <div class="contact-item">
@@ -183,14 +200,14 @@
         <label class="form-label">Message</label>
         <textarea class="form-textarea" placeholder="Tell us what you need..."></textarea>
       </div>
-      <button type="submit" class="btn-red" style="border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:0.95rem;">Send Message</button>
+      <a href="mailto:blojessenterprises1@gmail.com" class="btn-red" >Send Message</a>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <img src="blojess-logo.png" alt="Blojess Logo">
+  <img src="images/blojess-logo.png" alt="Blojess Logo">
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="index.html#products">Products</a>
@@ -199,6 +216,13 @@
   </div>
   <p class="footer-copy">© 2025 Blojess Enterprises. All rights reserved.</p>
 </footer>
-
+<script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    loader.classList.add('hidden');
+    // Remove from DOM after transition finishes
+    loader.addEventListener('transitionend', () => loader.remove());
+  });
+</script>
 </body>
 </html>
