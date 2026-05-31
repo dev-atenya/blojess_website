@@ -488,11 +488,12 @@ h1 span { color: var(--red); }
   border-bottom: 3px solid var(--red);
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   transform: translateY(-110%);
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, visibility 0.35s ease;
+  visibility: hidden;
   gap: 0 !important;
   z-index: 99;
 }
-.nav-links.open { transform: translateY(0); }
+.nav-links.open { transform: translateY(0); visibility: visible; }
 .nav-links li { border-bottom: 1px solid var(--border); }
 .nav-links a {
   display: block;
